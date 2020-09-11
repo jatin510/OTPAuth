@@ -1,13 +1,12 @@
 const express = require("express");
 const port = 8000;
-const expressLayouts = require("express-ejs-layouts");
+// const expressLayouts = require("express-ejs-layouts");
+const env = require("./config/environment");
+const client = require("twilio")(env.accountSID, env.authToken);
 
 const app = express();
 
-// app.use(expressLayouts);
-// // extract style ans scripts from sub pages into the layout
-// app.set("layout extractStyles", true);
-// app.set("layout extractScripts", true);
+app.use(express.urlencoded());
 
 app.set("view engine", "ejs");
 app.set("views", "./views");

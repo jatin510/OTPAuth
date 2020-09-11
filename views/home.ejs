@@ -6,6 +6,10 @@
     <title><%= title %></title>
   </head>
   <body>
-    <h1>hello</h1>
+    <form method="POST" action="/create-otp">
+      <label for="phoneNumber">Enter Contact No.</label>
+      <input type="tel" name="phoneNumber" placeholder="your Number" required />
+      <input type="submit" value="Send OTP" />
+    </form>
   </body>
 </html>
