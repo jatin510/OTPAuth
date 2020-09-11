@@ -6,4 +6,6 @@ const homeController = require("../controllers/home_controller");
 router.get("/", homeController.login);
 router.post("/create-otp", homeController.createOTP);
 
+router.use("/verify", require("./verify"));
+
 module.exports = router;
