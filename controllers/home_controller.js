@@ -20,5 +20,5 @@ module.exports.createOTP = function (req, res) {
 
   //   console.log("req.body", req.body);
 
-  return res.redirect("back");
+  return res.redirect(`/verify/?phoneNumber=${req.body.phoneNumber}&type=sms`);
 };
