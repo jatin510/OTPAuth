@@ -3,14 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/verify.css" />
     <title><%= title %></title>
   </head>
   <body>
-    <h1>Please Verify Mobile Number</h1>
+    <div id="container">
+      <div id="">Please Verify Mobile Number</div>
 
-    <form method="POST" action="/verify/check-otp">
-      <input type="number" name="code" required />
-      <input type="submit" value="verify" />
-    </form>
+      <div id="otp-sent-to">An OTP is sent to <%= locals.phone %></div>
+
+      <div id="change-no">
+        <a href="/">Change Phone Number</a>
+      </div>
+
+      <form method="POST" action="/verify/check-otp">
+        <input type="number" name="code" required />
+        <input id="verify" type="submit" value="verify" />
+      </form>
+    </div>
   </body>
 </html>

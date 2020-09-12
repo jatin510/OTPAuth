@@ -1,0 +1,108 @@
+body {
+  background-color: lightgrey;
+}
+
+#container {
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+  background-color: white;
+}
+
+#app-name {
+  position: absolute;
+  width: 264px;
+  height: 50px;
+  left: calc(50% - 264px / 2 - 0.5px);
+  top: calc(50% - 50px / 2 - 225px);
+}
+
+#welcome {
+  position: absolute;
+  width: 174px;
+  height: 28px;
+  left: calc(50% - 174px / 2 + 0.5px);
+  top: calc(50% - 28px / 2 - 75px);
+
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #000000;
+}
+
+#sign-in-info {
+  position: absolute;
+  width: 237px;
+  height: 19px;
+  left: calc(50% - 237px / 2 + 1px);
+  top: calc(50% - 19px / 2 - 31.5px);
+
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  color: #666666;
+}
+
+#contact {
+  position: absolute;
+  width: 134px;
+  height: 14px;
+  left: calc(50% - 134px / 2 - 90.5px);
+  top: calc(50% - 14px / 2 + 46px);
+
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  z-index: 1;
+  background-color: white;
+  color: #999999;
+}
+
+#phone-number {
+  position: absolute;
+  width: 343px;
+  height: 44px;
+  left: calc(50% - 343px / 2);
+  top: calc(50% - 44px / 2 + 68px);
+
+  border: 1px solid #ffd37d;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+#charges-info {
+  position: absolute;
+  width: 343px;
+  height: 28px;
+  left: calc(50% - 343px / 2);
+  top: calc(50% - 28px / 2 + 135px);
+
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+
+  color: #999999;
+}
+
+#submit {
+  position: absolute;
+  width: 224px;
+  height: 36px;
+  left: calc(50% - 224px / 2 - 0.5px);
+  top: calc(50% - 36px / 2 + 270px);
+  color: white;
+  background: #f7b348;
+  border-radius: 100px;
+}

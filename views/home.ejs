@@ -3,13 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/home.css" />
     <title><%= title %></title>
   </head>
   <body>
-    <form method="POST" action="/create-otp">
-      <label for="phoneNumber">Enter Contact No.</label>
-      <input type="tel" name="phoneNumber" placeholder="your Number" required />
-      <input type="submit" value="Send OTP" />
-    </form>
+    <div id="container">
+      <div id="app-name">
+        <img src="/images/admitkard.png" />
+      </div>
+
+      <div id="welcome">Welcome Back</div>
+
+      <div id="sign-in-info">Please sign in to your account</div>
+
+      <div id="sign-in">
+        <form method="POST" action="/create-otp">
+          <div id="contact">Enter Contact Number</div>
+          <input
+            id="phone-number"
+            type="tel"
+            name="phoneNumber"
+            placeholder="your Number"
+            required
+          />
+          <div id="charges-info">
+            We will send you a one time SMS message.<br />
+            Charges may apply
+          </div>
+          <input id="submit" type="submit" value="Sign in with OTP" />
+        </form>
+      </div>
+    </div>
   </body>
 </html>
