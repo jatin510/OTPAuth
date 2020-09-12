@@ -8,7 +8,7 @@
   </head>
   <body>
     <div id="container">
-      <div id="">Please Verify Mobile Number</div>
+      <div id="verify-mobile">Please Verify Mobile Number</div>
 
       <div id="otp-sent-to">An OTP is sent to <%= locals.phone %></div>
 
@@ -17,7 +17,11 @@
       </div>
 
       <form method="POST" action="/verify/check-otp">
-        <input type="number" name="code" required />
+        <input id="code" type="number" name="code" required />
+        <div id="resend">
+          <span>Didn't receive the code?</span>
+          <a href="/verify/resend-otp">Resend</a>
+        </div>
         <input id="verify" type="submit" value="verify" />
       </form>
     </div>

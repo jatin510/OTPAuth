@@ -1,5 +1,6 @@
 const env = require("../config/environment");
 const store = require("store");
+const request = require("request");
 const client = require("twilio")(env.accountSID, env.authToken);
 
 module.exports.verifyPage = function (req, res) {
@@ -36,4 +37,20 @@ module.exports.checkOTP = async function (req, res) {
   //   console.log("verification completed");
 
   return res.redirect("/get-started");
+};
+
+module.exports.resendOTP = (req, res) => {
+  const phone = store.get("phone").phone;
+
+  request(
+    {
+      url: "localhost:8000/create-otp",
+      method: "POST",
+      json: true,
+      body: { phoneNumber: phone },
+    },
+    (err, req, res) => {
+      console.log("successfully redirected");
+    }
+  );
 };
