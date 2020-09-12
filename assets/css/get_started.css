@@ -43,3 +43,50 @@ body {
 
   color: #333333;
 }
+
+#info {
+  position: absolute;
+  left: 7.73%;
+  right: 7.47%;
+  top: 62.07%;
+  bottom: 30.91%;
+
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+
+  color: #999999;
+}
+
+#get-started {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100px;
+  top: 81.03%;
+  bottom: 14.53%;
+  color: white;
+  border: none;
+  background: #f7b348;
+  border-radius: 100px;
+}
+
+#five-min {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 86.45%;
+  bottom: 11.82%;
+
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+
+  color: #999999;
+}

@@ -42,15 +42,24 @@ module.exports.checkOTP = async function (req, res) {
 module.exports.resendOTP = (req, res) => {
   const phone = store.get("phone").phone;
 
-  request(
-    {
-      url: "localhost:8000/create-otp",
-      method: "POST",
-      json: true,
-      body: { phoneNumber: phone },
-    },
-    (err, req, res) => {
-      console.log("successfully redirected");
-    }
-  );
+  console.log("verify ");
+
+  client.verify
+    .services(env.serviceId)
+    .verifications.create({
+      to: `+${phone}`,
+      channel: "sms",
+    })
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((err) => {
+      console.log("error in creating otp", err);
+      return res.redirect("back");
+    });
+
+  return res.render("verify", {
+    title: "verify",
+    phone: phone,
+  });
 };

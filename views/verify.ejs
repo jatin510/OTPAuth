@@ -17,7 +17,18 @@
       </div>
 
       <form method="POST" action="/verify/check-otp">
-        <input id="code" type="number" name="code" required />
+        <div id="">
+          <div id="">
+            <input
+              name="code"
+              id="partitioned"
+              type="text"
+              maxlength="4"
+              oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+              onKeyPress="if(this.value.length==4) return false;"
+            />
+          </div>
+        </div>
         <div id="resend">
           <span>Didn't receive the code?</span>
           <a href="/verify/resend-otp">Resend</a>
